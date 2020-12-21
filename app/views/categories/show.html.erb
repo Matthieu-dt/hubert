@@ -1,0 +1,19 @@
+<%= @category.name %>
+<br>
+<br>
+<%= link_to 'Update Category', edit_category_path(@category) %>
+<br>
+<br>
+<%= link_to 'Ajouter un item', new_category_artwork_path(@category) %>
+<br>
+<br>
+<%= link_to 'Back', categories_path %>
+<br>
+<br>
+<%= @category.description %>
+<br>
+<br>
+<% @category.artworks.each do |artwork| %>
+<%= link_to artwork.name, category_artwork_path(@category, artwork) %>
+<%= artwork.price %>
+<% end %>

@@ -1,0 +1,8 @@
+<%= simple_form_for [@category, @artwork]  do |f| %>
+    <%= f.input :name%>
+    <%= f.input :description%>
+    <%= f.input :price%>
+    <%= f.submit "Créer"%>
+  <% end %>
+  <%= link_to 'Retour', category_path(@category) %>
+

@@ -1,0 +1,5 @@
+<%= simple_form_for [ @category ] do |f| %>
+  <%= f.input :name, placeholder: "Donne un nom à ta catégorie"%>
+  <%= f.input :description, placeholder: "Décris la en quelques mots"%>
+  <%= f.submit "Create", class: "btn" %>
+<% end %>

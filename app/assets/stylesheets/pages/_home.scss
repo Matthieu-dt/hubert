@@ -1,1 +1,23 @@
 // Specific CSS for your home-page
+.banner {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url(../assets/souris.png);
+  height: 400px;
+  background-size: cover;
+  margin: auto;
+  margin-top: -50px;
+}
+.home-container {
+  margin-top: 50px;
+  display: block;
+  text-align: center;
+}
+.highlighted-blue {
+  color: blue;
+  background: #A0D0E8;
+  font-family: CircularStd-Black;
+}
+h1 {
+    margin: 0 auto 24px;
+    font-size: 40px;
+    font-family: CircularStd-Black;
+}

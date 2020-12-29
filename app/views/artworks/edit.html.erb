@@ -1,8 +1,14 @@
-<%= simple_form_for [@artwork.category, @artwork]  do |f| %>
+<div class="container-new">
+<%= simple_form_for [@category, @artwork]  do |f| %>
     <%= f.input :name%>
     <%= f.input :description%>
-    <%= f.input :price%>
-    <%= f.submit "Modifier"%>
-<% end %>
-<%= link_to 'Retour', category_artwork_path(@artwork.category, @artwork) %>
-
+    <%= f.input :photo, as: :file %>
+    <div class="btn-create-form">
+     <%= f.submit "Modifier", class: "btn"%>
+    </div>
+  <% end %>
+  <br>
+  <div style="text-align: center">
+    <%= link_to 'Retour', category_artwork_path(@artwork.category, @artwork) %>
+  </div>
+</div>

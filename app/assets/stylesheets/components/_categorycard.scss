@@ -1,0 +1,31 @@
+.category-card {
+  display: block;
+  margin-bottom: 17px;
+  break-inside: avoid;
+ }
+.category-photo {
+  align-items: center;
+  justify-content: center;
+}
+.category-card:hover {
+  opacity: 0.3;
+  transition: 0.5s;
+}
+.category-title {
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  font-family: montserrat;
+  margin-top: 5px;
+}
+.category-subtitle {
+  text-align: center;
+  font-family: montserrat;
+  font-size: 15px;
+  color: black;
+  margin-top: 4px;
+  font-style: italic;
+}
+.category-text {
+  column-fill: auto;
+}

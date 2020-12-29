@@ -1,6 +1,28 @@
-<%= link_to 'Nouvelle catégorie', new_category_path %>
-<br>
-<br>
-<% @categories.each do |category| %>
-<%= link_to category.name, category_path(category) %>
-<% end %>
+<div class="container" style="width: 1240px">
+  <% if user_signed_in? && current_user.admin%>
+    <%= link_to new_category_path do %>
+      <div class="btn button" style="width: 150px; margin-left: 0px;">
+        Créer catégorie
+      </div>
+    <% end %>
+  <% end %>
+  <div class="grid-cards">
+    <% @categories.each do |category| %>
+      <%= link_to category_path(category) do %>
+        <div class="category-card" style="display: block">
+          <div class="category-photo">
+            <%= cl_image_tag category.photo.key, width: 365, crop: :scale%>
+          </div>
+          <div class="category-text" >
+            <div class="category-title">
+              <%= category.name.upcase %>
+            </div>
+            <div class="category-subtitle">
+              <%= category.subtitle %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

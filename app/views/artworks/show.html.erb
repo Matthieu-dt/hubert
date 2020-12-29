@@ -1,4 +1,5 @@
 <%= @artwork.name %>
+<%= cl_image_tag @artwork.photo.key, height: 300, width: 400, crop: :fill %>
 <br>
 <br>
 <%= link_to 'Modifier', edit_category_artwork_path(@artwork.category, @artwork) %>

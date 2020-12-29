@@ -1,8 +1,14 @@
+<div class="container-new">
 <%= simple_form_for [@category, @artwork]  do |f| %>
     <%= f.input :name%>
     <%= f.input :description%>
-    <%= f.input :price%>
-    <%= f.submit "Créer"%>
+    <%= f.input :photo, as: :file %>
+    <div class="btn-create-form">
+     <%= f.submit "Créer", class: "btn"%>
+    </div>
   <% end %>
-  <%= link_to 'Retour', category_path(@category) %>
-
+  <br>
+  <div style="text-align: center">
+    <%= link_to 'Retour', category_path(@category) %>
+  </div>
+</div>

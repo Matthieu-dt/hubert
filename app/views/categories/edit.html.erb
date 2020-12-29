@@ -1,6 +1,15 @@
-<%= simple_form_for [ @category ] do |f| %>
-  <%= f.input :name%>
-  <%= f.input :description%>
-  <%= f.submit "Edit", class: "btn" %>
-<% end %>
-<%= link_to 'Back', category_path(@category) %>
+<div class="container-new">
+  <%= simple_form_for [ @category ] do |f| %>
+    <%= f.input :name, placeholder: "Donne un nom à ta catégorie"%>
+    <%= f.input :subtitle, placeholder: "Décris la en quelques mots"%>
+    <%= f.input :description, placeholder: "Description plus conséquente apparaitra sur la page de la catégorie"%>
+    <%= f.input :photo, as: :file %>
+    <div class="btn-create-form">
+      <%= f.submit "Modifier", class: "btn" %>
+    </div>
+  <% end %>
+  <br>
+  <div style="text-align: center">
+    <%= link_to "Retour", category_path(@category) %>
+  </div>
+</div>

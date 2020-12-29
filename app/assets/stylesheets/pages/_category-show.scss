@@ -1,3 +1,13 @@
 .back-btn i:hover {
   color: black;
 }
+.category-show-grid {
+  width: 100%;
+  columns: 3;
+  grid-row-gap: 5px;
+}
+.category-show-photo {
+  display: block;
+  margin-bottom: 5px;
+  break-inside: avoid;
+}

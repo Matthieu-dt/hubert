@@ -35,6 +35,16 @@
   </div>
   <br>
   <% if @category.artworks.length >= 1 %>
-  <%= cl_image_tag @category.artworks[0].photo.key, width: 300, fetch_format: :auto, crop: "scale" %>
+  <div style="display: flex; justify-content: center;">
+    <%= cl_image_tag @category.artworks[0].photo.key, width: 800, fetch_format: :auto, crop: "scale" %>
+  </div>
   <% end %>
+  <div class= category-show-grid style="margin-top: 10px; padding: 0px 100px;">
+    <% @category.artworks.each do |artwork| %>
+      <% if current_user.admin %>
+        <%= link_to "Supprimer",category_artwork_path(@category, artwork), method: :delete, data: { confirm: 'Es-tu sur de vouloir supprimer cet élément?' } %>
+      <% end %>
+      <%= cl_image_tag artwork.photo.key, width: 296, crop: :scale%>
+    <% end %>
+  </div>
 </div>

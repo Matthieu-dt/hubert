@@ -1,0 +1,27 @@
+.back-btn i:hover {
+  color: black;
+}
+.category-show-grid {
+  width: 100%;
+  columns: 3;
+  grid-row-gap: 5px;
+}
+.nav-link-log-in {
+  font-family: sans-serif;
+  font-size: 13px;
+  color: grey;
+  border: solid 1px grey;
+  margin-top: 10px;
+  margin-right: 10px;
+  width: 60px;
+  border-radius: 10px;
+  text-align: center;
+}
+.active-artwork-photo {
+  transform: scale(1.4);
+  transition: 0.5s;
+  z-index: 6;
+}
+.artwork-photo {
+  transition: 0.5s;
+}

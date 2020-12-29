@@ -1,5 +1,5 @@
 <div class="container">
-  <% if current_user.admin %>
+  <% if user_signed_in? && current_user.admin %>
     <div class="d-flex justify-content-center">
 
       <%= link_to edit_category_path(@category) do %>
@@ -23,7 +23,7 @@
   <% end %>
   <div class="back-btn">
     <%= link_to categories_path  do%>
-    <i class="fas fa-arrow-left" style="color: grey; font-size: 15px;"> Retour aux projets</i>
+    <i class="fas fa-arrow-left" style="color: black; font-size: 15px;"> Retourner aux projets</i>
   </div>
   <% end %>
   <div>
@@ -36,15 +36,23 @@
   <br>
   <% if @category.artworks.length >= 1 %>
   <div style="display: flex; justify-content: center;">
-    <%= cl_image_tag @category.artworks[0].photo.key, width: 800, fetch_format: :auto, crop: "scale" %>
+    <%= cl_image_tag @category.artworks[0].photo.key, width: 800, fetch_format: :auto, crop: "scale", class: "artwork-img" %>
   </div>
   <% end %>
-  <div class= category-show-grid style="margin-top: 10px; padding: 0px 100px;">
+  <div class="grid-cards" style="padding: 0px 100px;">
     <% @category.artworks.each do |artwork| %>
-      <% if current_user.admin %>
-        <%= link_to "Supprimer",category_artwork_path(@category, artwork), method: :delete, data: { confirm: 'Es-tu sur de vouloir supprimer cet élément?' } %>
-      <% end %>
-      <%= cl_image_tag artwork.photo.key, width: 296, crop: :scale%>
+      <div class="artwork-photo">
+        <%= cl_image_tag artwork.photo.key, width: 296, crop: :scale%>
+      </div>
+      <div style="display: flex; justify-content: center">
+        <% if user_signed_in? && current_user.admin %>
+          <%= link_to category_artwork_path(@category, artwork), method: :delete, data: { confirm: 'Supprimer cet article ?' } do %>
+          <div class="nav-link-log-in" style="width: 80px; margin-bottom: 5px;">
+            Supprimer
+          </div>
+          <% end %>
+        <% end %>
+      </div>
     <% end %>
   </div>
 </div>

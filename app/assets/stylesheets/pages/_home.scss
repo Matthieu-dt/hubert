@@ -1,10 +1,17 @@
 // Specific CSS for your home-page
 .banner {
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url(../assets/souris.png);
-  height: 400px;
-  background-size: cover;
-  margin: auto;
-  margin-top: -50px;
+  width: 100%;
+  display: block;
+  padding: 0px 140px;
+}
+.banner-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 9px;
+}
+.banner-image {
+  width: 200px;
+  border-radius: 10px;
 }
 .home-container {
   margin-top: 50px;
@@ -24,3 +31,18 @@ h1 {
 a:hover {
   text-decoration: none;
 }
+.home-presentation p {
+  text-align: justify;
+  color: #707070;
+  font-size: 13px;
+}
+.presentation p{
+  font-family: lato;
+  color: #707070;
+}
+.presentation h5{
+  font-family: lato;
+  color: #707070;
+}
+
+

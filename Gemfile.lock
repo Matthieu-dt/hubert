@@ -119,6 +119,9 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
+    mail_form (1.8.1)
+      actionmailer (>= 5.0)
+      activemodel (>= 5.0)
     marcel (0.3.3)
       mimemagic (~> 0.3.2)
     masonry-rails (0.2.4)
@@ -271,6 +274,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   jquery-turbolinks
   listen (~> 3.2)
+  mail_form
   masonry-rails (~> 0.2.4)
   pg (>= 0.18, < 2.0)
   pry-byebug

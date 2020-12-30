@@ -36,6 +36,7 @@ gem 'pundit'
 gem 'cloudinary', '~> 1.16.0'
 gem 'jquery-turbolinks'
 gem 'masonry-rails', '~> 0.2.4'
+gem 'mail_form'
 
 group :development, :test do
   gem 'pry-byebug'

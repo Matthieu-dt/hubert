@@ -1,0 +1,32 @@
+<div class="container" style="display: flex; justify-content: center">
+  <div class="contact-form">
+    <div style="text-align: center; font-family: lato;">
+      <h3>CONTACT</h3>
+      <P>Pour toute demande de contact, devis ou me faire part de vos projets</P>
+    </div>
+    <div style="display: flex; justify-content: center;">
+      <%= form_for @contact do |f| %>
+        <% if flash[:error].present? %>
+            <p> flash[:error]</p>
+        <% end %>
+        <%= f.label :name %> <br>
+        <%= f.text_field :name, required: true %>
+
+        <br>
+        <%= f.label :email %> <br>
+        <%= f.text_field :email, required: true %>
+
+        <br>
+        <%= f.label :message %> <br>
+        <%= f.text_area :message, as: :text %>
+
+        <br>
+        <%= f.label :nickname %> <br>
+        <%= f.text_field :nickname, hint: 'leave this field blank' %>
+
+
+        <%= f.submit 'Envoyer', class: "button" %>
+      <% end %>
+    </div>
+  </div>
+</div>

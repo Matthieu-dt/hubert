@@ -29,6 +29,9 @@
     <div class="navbar-text <%= "active_link" if action_name == "home" && controller_name == "pages" %>">
       <%= link_to "A PROPOS", root_path, class: "nav-link" %>
     </div>
+    <div class="navbar-text <%= "active_link" if action_name == "new" && controller_name == "contacs" %>">
+      <%= link_to "CONTACT", new_contact_path, class: "nav-link" %>
+    </div>
     <div class="navbar-text <%= "active_link" if action_name == "show" && controller_name == "influencers" %>">
       <%= link_to "BOUTIQUE", "#", class: "nav-link" %>
     </div>

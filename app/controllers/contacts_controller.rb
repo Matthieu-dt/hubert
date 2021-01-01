@@ -8,7 +8,6 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     @contact.request = request
     authorize @contact
-    @contact.save
     if @contact.deliver
       flash.now[:error] = nil
       redirect_to root_path, notice: 'Message bien reçu, je reviens vers vous dès que possible !'

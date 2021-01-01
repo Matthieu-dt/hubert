@@ -10,7 +10,6 @@ class ContactsController < ApplicationController
     authorize @contact
     if @contact.deliver
       flash.now[:error] = nil
-      redirect_to root_path, notice: 'Message bien reçu, je reviens vers vous dès que possible !'
     else
       flash.now[:error] = 'Cannot send message'
       render :new

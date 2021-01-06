@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Bilibin";
+  src: url('../assets/Bilibin');
+}
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
@@ -18,7 +22,8 @@
   color: #C9C9C9;
 }
 .navbar-title h1 {
-  font-size: 40;
+  font-size: 70;
+  font-family: 'Bilibin';
 }
 .nav-link-log-in {
   font-family: sans-serif;
